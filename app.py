@@ -1,9 +1,10 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException,Request
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import joblib
-
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
 app =FastAPI()
 
 
@@ -18,6 +19,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+templates = Jinja2Templates(directory="templates")
 
 
 class CustomerData(BaseModel):
@@ -42,11 +44,20 @@ class CustomerData(BaseModel):
     TotalCharges: float
     
    
-   
-@app.get('/')
-def home(): 
-    return {'message': 'Api is running'}
 
+@app.get("/", response_class=HTMLResponse)
+def home(request: Request):
+    return templates.TemplateResponse(request, "home.html")
+
+
+@app.get("/predict-page", response_class=HTMLResponse)
+def predict_page(request: Request):
+    return templates.TemplateResponse(request, "index.html")
+
+
+@app.get("/about", response_class=HTMLResponse)
+def about_page(request: Request):
+    return templates.TemplateResponse(request, "about.html")
 
 
 @app.post('/predict')
