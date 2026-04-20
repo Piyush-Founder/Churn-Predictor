@@ -1,10 +1,9 @@
 fastapi
-uvicorn[standard]
+uvicorn
 pandas
 joblib
 xgboost
-pydantic
-jinja2
 scikit-learn
+jinja2
 python-multipart
-aiofiles
+pydantic
