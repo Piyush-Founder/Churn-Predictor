@@ -56,7 +56,7 @@ def home(request: Request):
 
 @app.get("/predict-page", response_class=HTMLResponse)
 def predict_page(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("predict.html", {"request": request})
 
 
 @app.get("/about", response_class=HTMLResponse)
