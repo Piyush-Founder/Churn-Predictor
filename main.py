@@ -24,7 +24,7 @@ app.add_middleware(
 )
 
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
-templates = Jinja2Templates(directory=str(BASE_DIR / "templetes"))
+templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
 
 class CustomerData(BaseModel):
