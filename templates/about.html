@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Churn Predictor | About Model</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Churn Predictor</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Model</a>
+        <a href="predict.html">Predict</a>
+      </nav>
+      <a href="predict.html" class="nav-btn">Try Prediction</a>
+    </div>
+  </header>
+
+  <main class="about-page">
+    <section class="hero-small">
+      <div class="container">
+        <p class="eyebrow">About the Model</p>
+        <h1>How the churn prediction system works</h1>
+        <p class="subtext">
+          This page explains the machine learning model, the problem it solves, the technologies used,
+          and the kind of insights it provides.
+        </p>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="container grid-two">
+        <div class="panel">
+          <h2 style="color: rgb(0, 26, 26);">About Devloper</h2>
+          <p>
+            Devloped By <b style="background-color: black ; color:aliceblue; border-radius:4px">Piyush Shukla</b>.Developed By Piyush Shukla. In Making this Used (Churn Prediction Model Trained , Full Stack Dev Website , FastAPI)
+          </p>
+        </div>
+
+        <div class="panel">
+          <h2>Algorithm Used</h2>
+          <p>
+            XGBoost was used because it performs strongly on structured tabular data and handles
+            classification tasks efficiently with robust tuning options.
+          </p>
+        </div>
+      </div>
+      
+      
+    </section>
+
+    <section class="metrics-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Model Summary</p>
+          <h2>Core metrics and deployment stack</h2>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span>Use Case</span>
+            <h3>Telecom Churn</h3>
+          </div>
+          <div class="metric-card">
+            <span>Problem Type</span>
+            <h3>Classification</h3>
+          </div>
+          <div class="metric-card">
+            <span>Model</span>
+            <h3>XGBoost</h3>
+          </div>
+          <div class="metric-card">
+            <span>Backend</span>
+            <h3>FastAPI</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Workflow</p>
+          <h2>End-to-end flow of the project</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step-card">
+            <div class="step-no">01</div>
+            <h3>Data Preparation</h3>
+            <p>Cleaning, encoding, missing value handling, and feature alignment.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-no">02</div>
+            <h3>Model Training</h3>
+            <p>XGBoost model fitting with evaluation on churn-related metrics.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-no">03</div>
+            <h3>Model Saving</h3>
+            <p>Saved model, feature columns, and threshold for deployment use.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-no">04</div>
+            <h3>API Prediction</h3>
+            <p>FastAPI receives customer inputs, processes them, and returns prediction output.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack-section">
+      <div class="container">
+        <div class="panel large-panel">
+          <h2>Tech Stack</h2>
+          <div class="stack-list">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>XGBoost</span>
+            <span>Scikit-learn</span>
+            <span>Joblib</span>
+            <span>FastAPI</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <hr>
+  </footer>
+</body>
+</html>
